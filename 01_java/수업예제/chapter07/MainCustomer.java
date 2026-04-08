@@ -66,6 +66,11 @@ public class MainCustomer extends Customer {
 		 * */
 		return super.toString()+" 취미:"+hobby;
 	}
+	
+//	public String mainToString(){
+//		return "이름:"+getName()+" 나이:"+getAge()+" 주소:"+getAddress()+" 취미:"+hobby;
+//	}
+	
 }
 
 
