@@ -8,6 +8,12 @@ public class Engineer extends Employee {
 		this.skill = skill;
 	}
 	
+	public String getSkill() {
+		return skill;
+	}
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
 	@Override
 	public String toString() {
 		return  super.toString()+ "skill=" + skill ;
