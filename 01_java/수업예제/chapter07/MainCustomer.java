@@ -20,7 +20,12 @@ public class MainCustomer extends Customer {
 //		setAddress(address);
 		this.hobby = hobby;
 	}
-	
+	public String getHobby() {
+		return hobby;
+	}
+	public void setHobby(String hobby) {
+		this.hobby = hobby;
+	}
 	/**
 	 * method override(메서드 재정의)
 	 * 상속 받은 메서드와 동일한 이름의 메서드를 선언.
@@ -50,6 +55,8 @@ public class MainCustomer extends Customer {
 	 *      
 	 * - Exception을 throws할때는 동일한 예외를 throws하거나 , sub 예외를 throws하거나 , 아무 예외도 throws 안해도 된다. 
 	 * 
+	 * - access modifier는 같거나 더 넓은 범위로 
+	 * 
 	 * - 효과 
 	 *   1. 상속 받은 메서드와 이름, 인자가 같으므로 메서드 호출 방법이 기존 코드와 동일하고
 	 *      리턴 타입이 같으므로 호출 후 처리 방법이 동일하다. 
@@ -57,6 +64,14 @@ public class MainCustomer extends Customer {
 	 *         
 	 *   2. 동일한 기능인 경우 부모,자식 구별할 필요 없이 동일한 이름으로 호출한다. 
 	 *      ==> 호출에 대한 편리성 제공 , 유지 보수성 높임  
+	 *      
+	 *   3. 다형성 관계에서는 Override된 함수가 호출됨. ==>  Virtual Invocation
+	 *      ==> 기존의 코드를 수정하지 않고 변경된 내용을 반영할 수 있다. 
+	 *      
+	 *   4. shadow Impact를 해결 
+	 *      => Overried 된 메서드는 sub의 메서드 이므로 sub에 추가된 속성이나 함수에 
+	 *         접근 가능 
+	 *      
 	 */
 	public String toString() {
 //		return "이름:"+getName()+" 나이:"+getAge()+" 주소:"+getAddress()+" 취미:"+hobby;

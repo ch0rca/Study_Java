@@ -7,6 +7,10 @@ public class Engineer extends Employee {
 		super(empno, name, salary);
 		this.skill = skill;
 	}
+	public void test() {
+		//super.test();    //Employee와 Engineer는 같은 패키지 이므로 접근가능 
+		System.out.println("Engineer의 Test 함수");
+	}
 	
 	public String getSkill() {
 		return skill;
