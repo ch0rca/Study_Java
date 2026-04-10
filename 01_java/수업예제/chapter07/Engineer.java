@@ -5,7 +5,8 @@ public class Engineer extends Employee {
 	public Engineer() {	}
 	public Engineer(String empno, String name, int salary, String skill) {
 		super(empno, name, salary);
-		this.skill = skill;
+		//this.skill = skill;
+		setSkill(skill);
 	}
 	public void test() {
 		//super.test();    //Employee와 Engineer는 같은 패키지 이므로 접근가능 
@@ -16,6 +17,7 @@ public class Engineer extends Employee {
 		return skill;
 	}
 	public void setSkill(String skill) {
+		//////코딩....
 		this.skill = skill;
 	}
 	@Override

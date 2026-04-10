@@ -2,7 +2,7 @@ package chapter07;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Cloneable{
 	private String empno;
 	private String name;
 	private int salary;
@@ -20,13 +20,12 @@ public class Employee {
 	/**
 	 * clone : 객체 복제하는 기능 
 	 * - 사용하기 위해 반드시 Override
+	 * - Cloneable 인터페이스를 구현해야 clone 함수가 정상적으로 동작한다 
 	 */
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
-	
-	
 	
 	/**
 	 * equals : 객체의 내용이 같은지 비교하는 함수 

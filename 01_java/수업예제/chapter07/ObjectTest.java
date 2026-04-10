@@ -7,8 +7,11 @@ public class ObjectTest {
 		Employee emp1 = new Employee("1", "ureca", 3500000);
 		Employee emp2 = new Employee("1", "ureca", 3500000);
 		
-//		Employee emp3 = (Employee)emp1.clone();
+		Employee emp3 = (Employee)emp1.clone();
 		
+		System.out.println("emp3:"+emp3);
+		System.out.println(emp1==emp3);
+		System.out.println("emp3.hashcode():"+emp3.hashCode());
 		
 		Object o;
 		

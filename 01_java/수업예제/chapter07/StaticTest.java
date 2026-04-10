@@ -32,9 +32,13 @@ package chapter07;
  *        
  *    Nested class 
  */
-class Counter{					//Outer class, Enclosing class
-	static class Nested{  		//Nested class
-		
+class Counter{	//Outer class, Enclosing class
+	
+	//Nested class //static이라도 Nested를 참조할 때 동적으로 로딩된다.
+	static class Nested{  		 
+		static {
+			System.out.println("static Nested loading");
+		}
 	}
 	static int scount;
 	int icount;
